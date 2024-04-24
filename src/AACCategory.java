@@ -19,9 +19,9 @@ public class AACCategory {
 
   public void addItem​(String imageLoc, String text) {
     try {
-    this.arr.set(imageLoc, text);
+      this.arr.set(imageLoc, text);
     } catch (Exception e){
-        System.out.println("NEINNNN");
+      System.out.println("NEINNNN");
     }
   }
 
@@ -30,11 +30,12 @@ public class AACCategory {
   }
 
   public String[] getImages(){
-    String imag[] = new String[this.arr.size()];
-    for(int i = 0; i < this.arr.size(); i++) {
-      imag[i] = this.arr.getKey(i);
-    }
-    return imag;
+    return this.arr.getAllKeys();
+    // String imag[] = new String[this.arr.size()];
+    // for(int i = 0; i < this.arr.size(); i++) {
+    //   imag[i] = this.arr.getKey(i);
+    // }
+    // return imag;
   }
 
   public String getText(String txt){

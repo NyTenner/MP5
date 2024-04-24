@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import structures.KeyNotFoundException;
+import structures.NullKeyException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -50,8 +51,10 @@ public class AAC implements ActionListener {
 	 * 
 	 * @param filename the name of the file that contains the images and text that
 	 *                 will be in the AAC
+	 * @throws KeyNotFoundException 
+	 * @throws NullKeyException 
 	 */
-	public AAC(String filename) {
+	public AAC(String filename) throws KeyNotFoundException, NullKeyException {
 		//this.page = new AACCategory("test");
 		this.page = new AACMappings(filename);
 		this.images = this.page.getImageLocs();
@@ -151,7 +154,7 @@ public class AAC implements ActionListener {
 		pane.requestFocusInWindow();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws KeyNotFoundException, NullKeyException {
 
 		try {
 			// Set property as Kevin Dictionary

@@ -1,10 +1,15 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 import structures.AssociativeArray;
 import structures.KeyNotFoundException;
+import structures.NullKeyException;
 
 /**
  * A classs that helps map filenames to their corresponding words
@@ -14,15 +19,45 @@ import structures.KeyNotFoundException;
 
 public class AACMappings {
 
-    String file;
     AssociativeArray<String, AACCategory> categs;
     AACCategory curCat;
     AACCategory home;
 
-    public AACMappings(String file) {
-        this.file = file;
-        this.home = new AACCategory(file);
-        this.curCat = new AACCategory("");
+    public AACMappings(String file) throws KeyNotFoundException, NullKeyException {
+        this.home = new AACCategory("");
+        this.curCat = this.home;
+        this.categs = new AssociativeArray<String, AACCategory>();
+
+        try {
+          File txtf = new File(file);
+          Scanner input = new Scanner(txtf);
+
+          while (input.hasNextLine()) {
+            String line = input.nextLine();
+            String[] lines = line.split(" ", 2);
+
+            if (!line.substring(0, 1).equals(">")) {
+              // System.out.println(lines[0].substring(1, lines[0].length()));
+              // System.out.println(lines[1]);
+
+              this.home.addItem​(lines[0], lines[1]);
+              this.categs.set(lines[0], new AACCategory(lines[1]));
+              this.curCat = this.categs.get(lines[0]);
+              
+            } else {
+              // System.out.println(lines[0]);
+              this.curCat.addItem​(lines[0].substring(1, lines[0].length()), lines[1]);
+            }
+          }
+          this.curCat = this.home;
+          input.close();
+        }catch (FileNotFoundException e){
+
+        }
+
+
+
+
         //this.categ = new AssociativeArray<String, AACCategory>();
         try{
         this.categs.set(file, new AACCategory(file));

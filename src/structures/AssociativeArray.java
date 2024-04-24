@@ -225,6 +225,17 @@ public class AssociativeArray<K, V> {
     return this.pairs[index].key;
   }
 
+  public String[] getAllKeys(){
+    String[] keys = new String[this.size];
+    for (int i = 0; i < this.size; i++){
+      if (this.pairs[i] == null){
+        return keys;
+      }
+      keys[i] = (String) this.pairs[i].key;
+    }
+    return keys;
+  }
+
 } // class AssociativeArray
 
   
