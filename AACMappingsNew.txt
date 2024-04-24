@@ -1,15 +1,17 @@
->clothing/img/food/plate.png/img/food/icons8-french-fries-96.png french fries
->clothing/img/food/plate.png/img/food/icons8-watermelon-96.png watermelon
->clothing/img/food/plate.png/img/food/icons8-apple-96.png apple
->clothing/img/food/plate.png/img/food/icons8-cookies-96.png cookies
->clothing/img/food/plate.png/img/food/icons8-strawberry-96.png strawberry
->clothing/img/food/plate.png/img/food/icons8-pizza-96.png pizza
->clothing/img/food/plate.png/img/food/icons8-hamburger-96.png hamburger
->clothing/img/clothing/hanger.png/img/clothing/collaredshirt.png collared shirt
->clothing/img/clothing/hanger.png/img/clothing/sweater.png sweater
->clothing/img/clothing/hanger.png/img/clothing/skirt.png skirt
->clothing/img/clothing/hanger.png/img/clothing/rainboots.png rain boots
->clothing/img/clothing/hanger.png/img/clothing/cap.png ball cap
->clothing/img/clothing/hanger.png/img/clothing/swimsuit.png swim suit
->clothing/img/clothing/hanger.png/img/clothing/tshirt.png t shirt
->clothing/img/clothing/hanger.png/img/clothing/flipflops.png flip flops
+img/food/plate.png food
+>img/food/icons8-french-fries-96.png french fries
+>img/food/icons8-watermelon-96.png watermelon
+>img/food/icons8-apple-96.png apple
+>img/food/icons8-cookies-96.png cookies
+>img/food/icons8-strawberry-96.png strawberry
+>img/food/icons8-pizza-96.png pizza
+>img/food/icons8-hamburger-96.png hamburger
+img/clothing/hanger.png clothing
+>img/clothing/collaredshirt.png collared shirt
+>img/clothing/sweater.png sweater
+>img/clothing/skirt.png skirt
+>img/clothing/rainboots.png rain boots
+>img/clothing/cap.png ball cap
+>img/clothing/swimsuit.png swim suit
+>img/clothing/flipflops.png flip flops
+AACMappings.txt AACMappings.txt

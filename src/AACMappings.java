@@ -46,6 +46,7 @@ public class AACMappings {
               
             } else {
               // System.out.println(lines[0]);
+              this.categs.set(lines[0], new AACCategory(lines[1]));
               this.curCat.addItem​(lines[0].substring(1, lines[0].length()), lines[1]);
             }
           }
@@ -96,17 +97,14 @@ public class AACMappings {
       }
 
       public void writeToFile(String fileName) throws KeyNotFoundException{
+        // System.out.println(categs.size());
         try {
           PrintWriter pw = null;
           pw = new PrintWriter(fileName);
-          for (int i = 0; i < categs.size(); i++) {
-            
-            for (String cur : categs.get(this.categs.getKey(i)).getImages()) {
-              pw.println(">" + getCategory() + "/" + this.categs.getKey(i) + "/" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
-            }
+          int num = 0;
+          for (int i = 0; i+1 < categs.size(); i++) {
 
-            // File file = new File(fileName);
-            // FileWriter fw = new FileWriter(file, true);
+            pw.println(categs.getKey(i) + " " + categs.get(categs.getKey(i)).getCategory());
 
           }
 
@@ -117,5 +115,32 @@ public class AACMappings {
               e.printStackTrace();
         }
       }
+
+
+      // public void writeToFile(String fileName) throws KeyNotFoundException{
+      //   try {
+      //     PrintWriter pw = null;
+      //     pw = new PrintWriter(fileName);
+      //     for (int i = 0; i < categs.size(); i++) {
+            
+      //       // for (String cur : categs.get(this.categs.getKey(i)).getImages()) {
+      //       //   pw.println(">" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
+      //       //   pw.println(">" + getCategory() + "/" + this.categs.getKey(i) + "/" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
+      //       // }
+      //         pw.println(">" + categs[i] + " " + categs[i].get(this.categs.getKey(i)).getText(cur));
+      //         pw.println(">" + getCategory() + "/" + this.categs.getKey(i) + "/" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
+
+      //       // File file = new File(fileName);
+      //       // FileWriter fw = new FileWriter(file, true);
+
+      //     }
+
+      //     if (pw != null) {
+      //     pw.close();
+      //     }
+      //   } catch (IOException e) {
+      //         e.printStackTrace();
+      //   }
+      // }
       
 }
