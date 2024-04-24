@@ -115,32 +115,5 @@ public class AACMappings {
               e.printStackTrace();
         }
       }
-
-
-      // public void writeToFile(String fileName) throws KeyNotFoundException{
-      //   try {
-      //     PrintWriter pw = null;
-      //     pw = new PrintWriter(fileName);
-      //     for (int i = 0; i < categs.size(); i++) {
-            
-      //       // for (String cur : categs.get(this.categs.getKey(i)).getImages()) {
-      //       //   pw.println(">" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
-      //       //   pw.println(">" + getCategory() + "/" + this.categs.getKey(i) + "/" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
-      //       // }
-      //         pw.println(">" + categs[i] + " " + categs[i].get(this.categs.getKey(i)).getText(cur));
-      //         pw.println(">" + getCategory() + "/" + this.categs.getKey(i) + "/" + cur + " " + categs.get(this.categs.getKey(i)).getText(cur));
-
-      //       // File file = new File(fileName);
-      //       // FileWriter fw = new FileWriter(file, true);
-
-      //     }
-
-      //     if (pw != null) {
-      //     pw.close();
-      //     }
-      //   } catch (IOException e) {
-      //         e.printStackTrace();
-      //   }
-      // }
       
 }
